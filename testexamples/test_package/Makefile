@@ -25,5 +25,5 @@ define Package/test_package/install
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/test_package $(1)/usr/bin/
 endef
 
-$(eval $(call BuildPackage,check_python_version))
+$(eval $(call BuildPackage,test_package))
 
