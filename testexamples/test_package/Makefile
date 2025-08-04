@@ -13,7 +13,12 @@ define Package/test_package
 endef
 
 define Package/test_package/description
-	A simple C program to check Python version.
+        A simple C program to check Python version.
+endef
+
+define Build/Prepare
+	mkdir -p $(PKG_BUILD_DIR)
+	$(CP) ./check_python.c $(PKG_BUILD_DIR)/
 endef
 
 define Build/Compile
